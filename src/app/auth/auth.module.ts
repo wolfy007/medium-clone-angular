@@ -9,6 +9,8 @@ import {AuthRoutingModule} from './auth-routing.module';
 import {reducers} from 'src/app/auth/store/reducers';
 import {AuthService} from 'src/app/auth/services/auth.service';
 import {RegisterEffect} from 'src/app/auth/store/effects/register.effect';
+import {BackendErrorMessagesModule} from '../shared/modules/backendErrorMessages/backendErrorMessages.module';
+import {PersistenceService} from '../shared/services/persistence.service';
 
 @NgModule({
   imports: [
@@ -17,8 +19,9 @@ import {RegisterEffect} from 'src/app/auth/store/effects/register.effect';
     ReactiveFormsModule,
     StoreModule.forFeature('auth', reducers),
     EffectsModule.forFeature([RegisterEffect]),
+    BackendErrorMessagesModule,
   ],
   declarations: [RegisterComponent],
-  providers: [AuthService],
+  providers: [AuthService, PersistenceService],
 })
 export class AuthModule {}
