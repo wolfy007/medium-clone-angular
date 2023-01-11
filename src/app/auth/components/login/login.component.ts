@@ -15,7 +15,7 @@ import {loginAction} from 'src/app/auth/store/actions/login.action';
 @Component({
   selector: 'mc-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css'],
+  styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
   form: FormGroup;

@@ -15,7 +15,7 @@ import {BackendErrorsInterface} from 'src/app/shared/types/backendErrors.interfa
 @Component({
   selector: 'mc-register',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css'],
+  styleUrls: ['./register.component.scss'],
 })
 export class RegisterComponent implements OnInit {
   form: FormGroup;

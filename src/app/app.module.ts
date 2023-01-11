@@ -9,8 +9,9 @@ import {AuthModule} from './auth/auth.module';
 import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 import {EffectsModule} from '@ngrx/effects';
 import {TopBarModule} from 'src/app/shared/modules/topBar/topBar.module';
-import {PersistenceService} from './shared/services/persistence.service';
-import {AuthInterceptor} from './shared/services/auth-interceptor.service';
+import {PersistenceService} from 'src/app/shared/services/persistence.service';
+import {AuthInterceptor} from 'src/app/shared/services/auth-interceptor.service';
+import {GlobalFeedModule} from 'src/app/global-feed/global-feed.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -23,6 +24,7 @@ import {AuthInterceptor} from './shared/services/auth-interceptor.service';
     StoreDevtoolsModule.instrument({maxAge: 25, logOnly: !isDevMode()}),
     EffectsModule.forRoot([]),
     TopBarModule,
+    GlobalFeedModule,
   ],
   providers: [
     PersistenceService,

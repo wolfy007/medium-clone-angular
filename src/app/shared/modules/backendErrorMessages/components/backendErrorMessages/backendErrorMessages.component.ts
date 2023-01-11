@@ -5,7 +5,7 @@ import {BackendErrorsInterface} from 'src/app/shared/types/backendErrors.interfa
 @Component({
   selector: 'mc-backend-error-messages',
   templateUrl: './backendErrorMessages.component.html',
-  styleUrls: ['./backendErrorMessages.component.css'],
+  styleUrls: ['./backendErrorMessages.component.scss'],
 })
 export class BackendErrorMessagesComponent implements OnInit {
   @Input('backendErrors') backendErrorsProps: BackendErrorsInterface;

@@ -13,7 +13,7 @@ import {CurrentUserInterface} from 'src/app/shared/types/currentUser.interface';
 @Component({
   selector: 'mc-topbar',
   templateUrl: './top-bar.component.html',
-  styleUrls: ['./top-bar.component.css'],
+  styleUrls: ['./top-bar.component.scss'],
 })
 export class TopBarComponent implements OnInit {
   isLoggedIn$: Observable<boolean>;
