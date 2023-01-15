@@ -3,10 +3,11 @@ import {CommonModule} from '@angular/common';
 
 import {GlobalFeedComponent} from 'src/app/global-feed/components/global-feed/global-feed.component';
 import {GlobalFeedRoutingModule} from './global-feed.routing';
-import {FeedModule} from '../shared/modules/feed/feed.module';
+import {FeedModule} from 'src/app/shared/modules/feed/feed.module';
+import {BannerModule} from 'src/app/shared/modules/banner/banner.module';
 
 @NgModule({
-  imports: [CommonModule, GlobalFeedRoutingModule, FeedModule],
+  imports: [CommonModule, GlobalFeedRoutingModule, FeedModule, BannerModule],
   declarations: [GlobalFeedComponent],
 })
 export class GlobalFeedModule {}
