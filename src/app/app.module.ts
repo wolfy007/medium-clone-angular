@@ -2,6 +2,7 @@ import {NgModule, isDevMode} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {StoreModule} from '@ngrx/store';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
+import {routerReducer, StoreRouterConnectingModule} from '@ngrx/router-store';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
@@ -21,12 +22,15 @@ import {FeedModule} from './shared/modules/feed/feed.module';
     AppRoutingModule,
     AuthModule,
     HttpClientModule,
-    StoreModule.forRoot({}),
+    StoreModule.forRoot({
+      router: routerReducer,
+    }),
     StoreDevtoolsModule.instrument({maxAge: 25, logOnly: !isDevMode()}),
     EffectsModule.forRoot([]),
     TopBarModule,
     GlobalFeedModule,
     FeedModule,
+    StoreRouterConnectingModule.forRoot(),
   ],
   providers: [
     PersistenceService,
