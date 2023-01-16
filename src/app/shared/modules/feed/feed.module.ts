@@ -10,6 +10,7 @@ import {GetFeedEffect} from 'src/app/shared/modules/feed/store/effects/getFeed.e
 import {reducers} from 'src/app/shared/modules/feed/store/reducers';
 import {ErrorMessageModule} from '../error-message/error-message.module';
 import {LoadingModule} from '../loading/loading.module';
+import {PaginationModule} from '../pagination/pagination.module';
 
 @NgModule({
   imports: [
@@ -19,6 +20,7 @@ import {LoadingModule} from '../loading/loading.module';
     RouterModule,
     ErrorMessageModule,
     LoadingModule,
+    PaginationModule,
   ],
   declarations: [FeedComponent],
   exports: [FeedComponent],
